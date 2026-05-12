@@ -1,0 +1,25 @@
+{"ts":"2026-05-11T17:15:29.301Z","cmd":"goto","args":"http://localhost:5173","origin":"http://localhost:5173/","durationMs":182,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-11T17:15:29.408Z","cmd":"screenshot","args":"/tmp/app-initial.png","origin":"http://localhost:5173/","durationMs":52,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-11T17:15:37.085Z","cmd":"snapshot","args":"-i","origin":"http://localhost:5173/","durationMs":13,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-11T17:15:41.467Z","cmd":"click","args":"@e27","origin":"http://localhost:5173/","durationMs":90,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-11T17:15:42.076Z","cmd":"screenshot","args":"/tmp/app-after-run.png","origin":"http://localhost:5173/","durationMs":49,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-11T17:15:52.359Z","cmd":"select","args":"@e6 Always Defect","origin":"http://localhost:5173/","durationMs":17,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-11T17:15:52.435Z","cmd":"click","args":"@e27","origin":"http://localhost:5173/","durationMs":42,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-11T17:15:52.845Z","cmd":"screenshot","args":"/tmp/app-defect-vs-tft.png","origin":"http://localhost:5173/","durationMs":45,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-11T17:16:04.791Z","cmd":"select","args":"@e1 Stablecoin Depeg Panic","origin":"http://localhost:5173/","durationMs":5,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-11T17:16:04.843Z","cmd":"select","args":"@e6 Grim Trigger","origin":"http://localhost:5173/","durationMs":19,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-11T17:16:04.887Z","cmd":"select","args":"@e16 Noisy Cooperator","origin":"http://localhost:5173/","durationMs":13,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-11T17:16:04.987Z","cmd":"click","args":"@e27","origin":"http://localhost:5173/","durationMs":69,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-11T17:16:05.396Z","cmd":"screenshot","args":"/tmp/app-depeg.png","origin":"http://localhost:5173/","durationMs":45,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-11T17:16:18.658Z","cmd":"snapshot","args":"-i -C","origin":"http://localhost:5173/","durationMs":5,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-11T17:16:49.121Z","cmd":"screenshot","args":"/tmp/app-roundlog.png","origin":"http://localhost:5173/","durationMs":56,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-11T17:16:53.704Z","cmd":"click","args":"Round log","origin":"http://localhost:5173/","durationMs":35015,"status":"error","hasCookies":false,"mode":"launched","error":"click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('Round log')\u001b[22m\n"}
+{"ts":"2026-05-11T17:16:55.095Z","cmd":"click","args":"@e29","origin":"http://localhost:5173/","durationMs":30,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-11T17:16:55.723Z","cmd":"screenshot","args":"/tmp/app-roundlog2.png","origin":"http://localhost:5173/","durationMs":63,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-12T10:25:59.212Z","cmd":"goto","args":"http://localhost:5173","origin":"http://localhost:5173/","durationMs":112,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-12T10:25:59.690Z","cmd":"select","args":"#scenario Stablecoin Depeg Panic","origin":"http://localhost:5173/","durationMs":424,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-12T10:25:59.749Z","cmd":"select","args":"#strategyA Grim Trigger","origin":"http://localhost:5173/","durationMs":4,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-12T10:25:59.784Z","cmd":"select","args":"#strategyB Noisy Cooperator","origin":"http://localhost:5173/","durationMs":2,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-12T10:25:59.833Z","cmd":"fill","args":"#rounds 30","origin":"http://localhost:5173/","durationMs":18,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-12T10:25:59.908Z","cmd":"click","args":".button","origin":"http://localhost:5173/","durationMs":43,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-12T10:26:00.552Z","cmd":"screenshot","args":"/tmp/app-hero.png","origin":"http://localhost:5173/","durationMs":83,"status":"ok","hasCookies":false,"mode":"launched"}
