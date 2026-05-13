@@ -34,7 +34,7 @@ function AnimatedScore({ value }: { value: number }) {
 
   useEffect(() => {
     const unsub = spring.on('change', (v) => {
-      setDisplay(Number.isInteger(value) ? Math.round(v).toString() : v.toFixed(1))
+      setDisplay(v.toFixed(2))
     })
     return unsub
   }, [spring, value])
@@ -112,12 +112,16 @@ const App: React.FC = () => {
     if (!result) return null
     const [aTotal, bTotal] = result.cumulativePayoffs
     if (aTotal === bTotal) {
-      return { title: "It's a draw.", line: `${stratA.label} and ${stratB.label} tie with ${aTotal} pts over ${totalRounds} rounds.`, winner: 'tie' }
+      return { title: "It's a draw.", line: `${stratA.label} and ${stratB.label} tie with ${aTotal.toFixed(2)} pts over ${totalRounds} rounds.`, winner: 'tie' }
     }
     const isAWinner = aTotal > bTotal
+    const winnerScore = (isAWinner ? aTotal : bTotal).toFixed(2)
+    const loserScore = (isAWinner ? bTotal : aTotal).toFixed(2)
+    const winnerLabel = isAWinner ? stratA.label : stratB.label
+    const loserLabel = isAWinner ? stratB.label : stratA.label
     return {
-      title: `${isAWinner ? stratA.label : stratB.label} wins.`,
-      line: `${isAWinner ? stratA.label : stratB.label} ends at ${isAWinner ? aTotal : bTotal} vs ${isAWinner ? stratB.label : stratA.label} at ${isAWinner ? bTotal : aTotal} over ${totalRounds} rounds.`,
+      title: `${winnerLabel} wins.`,
+      line: `${winnerLabel} ends at ${winnerScore} vs ${loserLabel} at ${loserScore} over ${totalRounds} rounds.`,
       winner: isAWinner ? 'A' : 'B',
     }
   }, [result, stratA, stratB, totalRounds])
@@ -154,7 +158,7 @@ const App: React.FC = () => {
         <div className="header">
           <div className="header-left">
             <div className="title">Agent vs Agent</div>
-            <div className="subtitle">Game theory sandbox — pick strategies, run rounds, see who survives.</div>
+            <div className="subtitle">Game theory sandbox. Pick strategies, run rounds, see who survives.</div>
           </div>
         </div>
 
@@ -223,7 +227,7 @@ const App: React.FC = () => {
             <div className="panel">
               <div className="panel-label">Settings</div>
               <div className="field">
-                <label htmlFor="rounds">Rounds (1–200)</label>
+                <label htmlFor="rounds">Rounds (1 to 200)</label>
                 <input
                   id="rounds"
                   type="number"
@@ -420,10 +424,10 @@ const App: React.FC = () => {
                                       <td style={{ color: '#6b7280' }}>{h.round}</td>
                                       <td><ActionBadge action={h.actions[0]} delay={idx * 0.025} /></td>
                                       <td><ActionBadge action={h.actions[1]} delay={idx * 0.025 + 0.04} /></td>
-                                      <td>{h.payoffs[0].toFixed(1)}</td>
-                                      <td>{h.payoffs[1].toFixed(1)}</td>
-                                      <td style={{ color: '#60a5fa' }}>{cumA.toFixed(1)}</td>
-                                      <td style={{ color: '#f472b6' }}>{cumB.toFixed(1)}</td>
+                                      <td>{h.payoffs[0].toFixed(2)}</td>
+                                      <td>{h.payoffs[1].toFixed(2)}</td>
+                                      <td style={{ color: '#60a5fa' }}>{cumA.toFixed(2)}</td>
+                                      <td style={{ color: '#f472b6' }}>{cumB.toFixed(2)}</td>
                                     </motion.tr>
                                   )
                                 })}
