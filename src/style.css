@@ -160,10 +160,23 @@ body {
   font-weight: 600;
   cursor: pointer;
   margin-top: 4px;
-  transition: opacity 0.15s, transform 0.1s;
+  overflow: hidden;
+  position: relative;
 }
-.button:hover { opacity: 0.9; transform: translateY(-1px); }
-.button:active { transform: translateY(0); }
+.button:hover { opacity: 0.9; }
+.btn-shimmer {
+  display: inline-block;
+  background: linear-gradient(90deg, #fff 0%, #bae6fd 40%, #fff 60%, #bae6fd 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 1.2s linear infinite;
+}
+@keyframes shimmer {
+  0% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
 
 /* Results area */
 .results-area {
@@ -208,9 +221,13 @@ body {
   text-align: center;
   padding: 12px;
   border-radius: 10px;
+  position: relative;
+  transition: opacity 0.4s, filter 0.4s;
 }
 .score-a { background: rgba(96,165,250,0.08); border: 1px solid rgba(96,165,250,0.2); }
 .score-b { background: rgba(244,114,182,0.08); border: 1px solid rgba(244,114,182,0.2); }
+.score-winner { filter: brightness(1.15); }
+.score-loser { opacity: 0.45; filter: saturate(0.4); }
 .score-name { font-size: 0.75rem; color: #94a3b8; margin-bottom: 4px; }
 .score-val { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.03em; }
 .score-a .score-val { color: #60a5fa; }
