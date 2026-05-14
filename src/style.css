@@ -153,17 +153,21 @@ body {
   width: 100%;
   padding: 9px 12px;
   border-radius: 9px;
-  border: 1px solid #3b82f6;
-  background: linear-gradient(135deg, #1d4ed8 0%, #0ea5e9 100%);
-  color: white;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: #e2e8f0;
   font-size: 0.85rem;
   font-weight: 600;
   cursor: pointer;
   margin-top: 4px;
   overflow: hidden;
   position: relative;
+  transition: border-color 0.15s, background 0.15s;
 }
-.button:hover { opacity: 0.9; }
+.button:hover:not(:disabled) {
+  border-color: #475569;
+  background: #1e293b;
+}
 .btn-shimmer {
   display: inline-block;
   background: linear-gradient(90deg, #fff 0%, #bae6fd 40%, #fff 60%, #bae6fd 100%);
