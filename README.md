@@ -1,4 +1,4 @@
-# Agent vs Agent — Game Theory DeFi Lab
+# Agent vs Agent: Game Theory DeFi Lab
 
 A browser-based sandbox for running repeated game-theory simulations with DeFi-native scenarios. Pick two strategies, choose an episode, run up to 200 rounds, and watch who survives.
 
